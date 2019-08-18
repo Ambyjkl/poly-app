@@ -6,7 +6,7 @@ before_script:
   - cd $HOME
   - git clone https://github.com/flutter/flutter.git
   - cd -
-  - export $PATH="$PATH:$HOME/flutter/bin"
+  - export PATH="$PATH:$HOME/flutter/bin"
   - flutter doctor
 jobs:
   include:
