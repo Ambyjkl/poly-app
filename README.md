@@ -16,4 +16,25 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Git LFS
+
 Install git LFS for managing binary files in the repo. Learn more at https://git-lfs.github.com/
+
+## Running on Arch Linux
+
+Packages on the AUR are buggy; install `flutter` and `android-sdk` manually. It's recommended to put the folders in `/opt`.
+
+#### Installing `android-sdk`
+
+* Go to https://developer.android.com/studio/index.html#downloads
+* Install `sdk-tools-linux-*` under "Command line tools only"
+* Unzip the `.zip` and find `tools/bin/sdkmanager`
+* Run `sdkmanager "platforms;android-28" "platform-tools" "build-tools;28.0.3" "emulator"
+* Move the outer folder (ie. the folder containing `tools`) to `/opt/android-sdk`
+
+#### Installing `flutter`
+
+* Go to https://flutter.dev/docs/get-started/install/linux
+* Install the tarball and move the `flutter` to `/opt/flutter
+* Add `/opt/flutter/bin` to your $PATH
+* Run `flutter doctor`
+  * You may need to set your `ANDROID_SDK` variable to `/opt/android-sdk`
