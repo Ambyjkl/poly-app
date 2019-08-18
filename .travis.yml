@@ -11,7 +11,7 @@ before_script:
 jobs:
   include:
     - state: Format
-      script: ./check-format.sh
+      script: flutter format --set-exit-if-changed -n lib
     - state: Test
       script: flutter test
 cache:
