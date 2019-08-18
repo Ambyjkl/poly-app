@@ -4,7 +4,7 @@ os:
 sudo: false
 before_script:
   - cd $HOME
-  - git clone https://github.com/flutter/flutter.git
+  - git clone https://github.com/flutter/flutter.git --depth 1
   - cd -
   - export PATH="$PATH:$HOME/flutter/bin"
   - flutter doctor
